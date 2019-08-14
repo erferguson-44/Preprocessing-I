@@ -1,8 +1,8 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+// // Is this working?
+// /* http://meyerweb.com/eric/tools/css/reset/ 
+//    v2.0 | 20110126
+//    License: none (public domain)
+// */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -50,11 +50,36 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
+	max-width:100%;
+	border:1px solid purple;
 }
 
 html, body {
 	height: 100%;
+	margin:2%;
 	background:dodgerblue;
+	font-size:62.5%;
 }
+h1, h2, h3, h4, h5, h6{
+	font-size:3rem;
+}
+
+//HEADER//
+header{
+	background:purple;
+}
+.navbar{
+	display:flex;
+	justify-content:space-around;
+	padding:10px;
+	font-size:1rem;
+}
+.navbar a{
+	text-decoration:none;
+	color:black;
+}
+
 
