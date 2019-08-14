@@ -70,7 +70,13 @@ p{
 }
 .wholeContainer{
 	border:1px solid red;
-	background:dodgerblue;
+	// background:dodgerblue;
+	background-origin: center;
+	background-image: linear-gradient(#003399,white);
+	border-radius: 50px;
+	padding: 20px;
+	border-image:
+		linear-gradient(to bottom, #fbabbe,white);
 }
 //HEADER//
 
@@ -85,15 +91,58 @@ p{
 	color:black;
 }
 //ACTION CONTAINER//
-.Action-Container{
-	background:lightgray;
-}
 .img-box{
-	width:22%;
+	width:30%;
+	padding-bottom:2%;
 }
 .img-box img{
 	border-radius:25px;
 }
+.Action-Container{
+	background:lightgray;
+	padding:2%;
+}
+.AC-top{
+	padding:2% 0;
+	border-bottom:1px solid black;
+}
+.AC-top p{
+	padding-top:1%;
+}
+
+.AC-bottomm{
+	padding:2% 0;
+}
+.AC-bottom div{
+	padding-bottom:1%;
+}
+.AC-bottom button{
+	background:;
+	width:15%;
+	padding:.5%;
+	border-radius:5px;
+	font-weight:bold;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #003399;
+	background-color: #FFFFFF;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #003399;
+}
+.AC-bottom button:hover{
+	background:#003399;
+	color:#FFFFFF;
+	box-shadow: 0 9px #FFFFFF;
+}
+.AC-bottom button:active {
+	background-color: #FFFFFF;
+	color:#003399;
+	box-shadow: 0 5px gold;
+	transform: translateY(4px);
+}
+
 
 //SKILL CONTAINER//
 .Skill-Container{
