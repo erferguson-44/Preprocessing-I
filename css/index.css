@@ -230,35 +230,38 @@ p {
   box-shadow: 0 5px gold;
   transform: translateY(4px);
 }
-.Skill-Container {
+.wholeContainer .Skill-Container {
   border: 2px solid gold;
   background: ghostwhite;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.Skill-Container .SK-left {
+@media (max-width: 500px) {
+  .wholeContainer .Skill-Container .Skill-Container {
+    display: flex;
+  }
+  .wholeContainer .Skill-Container .SK-left {
+    background: purple;
+    display: flex;
+  }
+}
+.wholeContainer .Skill-Container .SK-left {
   border: 1px solid red;
 }
-.Skill-Container .img-box {
+.wholeContainer .Skill-Container .img-box {
   border: 1px solid purple;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.Skill-Container .img-box div {
+.wholeContainer .Skill-Container .img-box div {
   border: 1px solid red;
 }
-@media (max-width: 500px) {
-  .Skill-Container .SK-left,
-  .Skill-Container .img-box {
-    background: pink;
-  }
-}
-.Work-Container h3 {
+.wholeContainer .Work-Container h3 {
   font-size: 1rem;
 }
-.Work-Container .title {
+.wholeContainer .Work-Container .title {
   border: 1px solid purple;
   border-top: 1px solid gray;
   display: flex;
@@ -266,15 +269,15 @@ p {
   justify-content: space-between;
   padding: 10px;
 }
-.Work-Container .title div {
+.wholeContainer .Work-Container .title div {
   border: 1px solid purple;
 }
-.Work-Container .experience-box {
+.wholeContainer .Work-Container .experience-box {
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
-.Work-Container .experience-box .experience {
+.wholeContainer .Work-Container .experience-box .experience {
   border: 1px solid purple;
   border-top: 1px solid gray;
   display: flex;
@@ -282,7 +285,7 @@ p {
   justify-content: space-between;
   padding: 10px;
 }
-footer {
+.wholeContainer footer {
   border: 1px solid purple;
   display: flex;
   justify-content: space-around;

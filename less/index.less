@@ -121,7 +121,6 @@ p{
 				align-items: center;
 				text-align:center;
 			}
-
 		}
 		.AC-top{
 			// padding:2% 0;
@@ -172,17 +171,24 @@ p{
 			}
 		}
 	}
-}
 
 	//SKILL CONTAINER//
 	.Skill-Container{
 		border:2px solid gold;
 		background:ghostwhite;
-		// padding:2% 0;
 		display:flex;
 		justify-content:space-between;
 		align-items:center;
-
+		
+		@media (max-width: 500px){
+			.Skill-Container{
+			display:flex;
+			}
+			.SK-left{
+				background:purple;
+				display: flex;
+			}
+		}
 		.SK-left{
 			border:1px solid red;
 		}
@@ -195,12 +201,6 @@ p{
 
 			div{
 				border:1px solid red;
-			}
-		}
-
-		@media (max-width: 500px){
-			.SK-left, .img-box{
-				background:pink;
 			}
 		}
 	}
@@ -246,3 +246,4 @@ p{
 		padding:20px;
 		font-size:1rem;
 	}
+}
