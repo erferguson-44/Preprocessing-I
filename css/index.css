@@ -25,10 +25,13 @@ p {
 .wholeContainer {
   border: 1px solid red;
   background-origin: center;
-  background-image: linear-gradient(#003399, white);
+  background-image: linear-gradient(#003399, #FFFFFF);
   border-radius: 50px;
   padding: 20px;
-  border-image: linear-gradient(to bottom, #003399, white);
+  border-image: linear-gradient(to bottom, #003399, #FFFFFF);
+}
+main {
+  font-family: 'Hind Madurai', sans-serif;
 }
 .navbar {
   display: flex;
@@ -40,13 +43,6 @@ p {
   text-decoration: none;
   color: #FFFFFF;
 }
-.img-box {
-  width: 30%;
-  padding-bottom: 2%;
-}
-.img-box img {
-  border-radius: 25px;
-}
 .Action-Container {
   background: lightgray;
   padding: 2% 2% 7% 2%;
@@ -54,6 +50,16 @@ p {
 .AC-top {
   padding: 2% 0;
   border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-box {
+  width: 40%;
+  padding: 2%;
+}
+.img-box img {
+  border-radius: 25px;
 }
 .AC-top p {
   padding-top: 1%;
@@ -121,6 +127,22 @@ p {
   padding: 10px;
 }
 .title div {
+  border: 1px solid purple;
+}
+.experience-box {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.experience {
+  border: 1px solid purple;
+  border-top: 1px solid gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+.experience div {
   border: 1px solid purple;
 }
 footer {

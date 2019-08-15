@@ -68,35 +68,41 @@ h1, h2, h3, h4, h5, h6{
 p{
 	font-size:1.2rem;
 }
+
+//VARIABLES//
+@main-font:'Hind Madurai', sans-serif;
+@color-primary:#003399;
+@color-secondary:#FFFFFF;
+
 .wholeContainer{
 	border:1px solid red;
 	background-origin: center;
-	background-image: linear-gradient(#003399,white);
+	background-image: linear-gradient(@color-primary,@color-secondary);
 	border-radius: 50px;
 	padding: 20px;
 	border-image:
-		linear-gradient(to bottom, #003399,white);
+		linear-gradient(to bottom,@color-primary,@color-secondary);
 }
-//HEADER//
 
+
+//MAIN//
+main{
+	font-family:@main-font;
+}
+//NAVBAR-HEADER//
 .navbar{
 	display:flex;
 	justify-content:space-around;
 	padding:10px;
 	font-size:1.4rem;
+	a{
+		text-decoration:none;
+		color:@color-secondary;
+	}
 }
-.navbar a{
-	text-decoration:none;
-	color:#FFFFFF;
-}
+
 //ACTION CONTAINER//
-.img-box{
-	width:30%;
-	padding-bottom:2%;
-}
-.img-box img{
-	border-radius:25px;
-}
+
 .Action-Container{
 	background:lightgray;
 	padding:2% 2% 7% 2%;
@@ -104,6 +110,16 @@ p{
 .AC-top{
 	padding:2% 0;
 	border-bottom:1px solid black;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
+.img-box{
+	width:40%;
+	padding:2%;
+	img{
+		border-radius:25px;
+	}
 }
 .AC-top p{
 	padding-top:1%;
@@ -124,24 +140,23 @@ p{
 	text-align: center;
 	cursor: pointer;
 	outline: none;
-	color: #003399;
-	background-color: #FFFFFF;
+	color: @color-primary;
+	background-color: @color-secondary;
 	border: none;
 	border-radius: 15px;
-	box-shadow: 0 9px #003399;
+	box-shadow: 0 9px @color-primary;
 }
 .AC-bottom button:hover{
-	background:#003399;
-	color:#FFFFFF;
-	box-shadow: 0 9px #FFFFFF;
+	background:@color-primary;
+	color:@color-secondary;
+	box-shadow: 0 9px @color-secondary;
 }
 .AC-bottom button:active {
-	background-color: #FFFFFF;
-	color:#003399;
+	background-color: @color-secondary;
+	color:@color-primary;
 	box-shadow: 0 5px gold;
 	transform: translateY(4px);
 }
-
 
 //SKILL CONTAINER//
 .Skill-Container{
@@ -179,6 +194,25 @@ p{
 	padding:10px;
 }
 .title div{
+	border:1px solid purple;
+}
+
+.experience-box{
+	display:flex;
+	flex-direction:column;
+	// justify-content: space-between;
+	// align-content:flex-start;
+	align-items:stretch;
+}
+.experience{
+	border:1px solid purple;
+	border-top:1px solid gray;
+	display:flex;
+	flex-direction:row;
+	justify-content: space-between;
+	padding:10px;
+}
+.experience div{
 	border:1px solid purple;
 }
 //FOOTER//
