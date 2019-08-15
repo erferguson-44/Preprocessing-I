@@ -4,49 +4,49 @@
 // //    License: none (public domain)
 // // */
 
-// html, body, div, span, applet, object, iframe,
-// h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-// a, abbr, acronym, address, big, cite, code,
-// del, dfn, em, img, ins, kbd, q, s, samp,
-// small, strike, strong, sub, sup, tt, var,
-// b, u, i, center,
-// dl, dt, dd, ol, ul, li,
-// fieldset, form, label, legend,
-// table, caption, tbody, tfoot, thead, tr, th, td,
-// article, aside, canvas, details, embed, 
-// figure, figcaption, footer, header, hgroup, 
-// menu, nav, output, ruby, section, summary,
-// time, mark, audio, video {
-// 	margin: 0;
-// 	padding: 0;
-// 	border: 0;
-// 	font-size: 100%;
-// 	font: inherit;
-// 	vertical-align: baseline;
-// }
-// /* HTML5 display-role reset for older browsers */
-// article, aside, details, figcaption, figure, 
-// footer, header, hgroup, menu, nav, section {
-// 	display: block;
-// }
-// body {
-// 	line-height: 1;
-// }
-// ol, ul {
-// 	list-style: none;
-// }
-// blockquote, q {
-// 	quotes: none;
-// }
-// blockquote:before, blockquote:after,
-// q:before, q:after {
-// 	content: '';
-// 	content: none;
-// }
-// table {
-// 	border-collapse: collapse;
-// 	border-spacing: 0;
-// }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 /* Set every element's box-sizing to border-box */
 * {
@@ -54,7 +54,7 @@
 	padding:0;
 	margin:0;
 	max-width:100%;
-	// border:1px solid purple;
+	border:1px solid purple;
 }
 
 html, body {
@@ -74,6 +74,13 @@ p{
 @color-primary:#003399;
 @color-secondary:#FFFFFF;
 
+//MIXINS//
+.center(){
+	display:flex;
+	justify-content: space-between;
+	align-items:center;
+}
+
 .wholeContainer{
 	border:1px solid red;
 	background-origin: center;
@@ -82,148 +89,160 @@ p{
 	padding: 20px;
 	border-image:
 		linear-gradient(to bottom,@color-primary,@color-secondary);
-}
+	
+		//MAIN//
+	main{
+		font-family:@main-font;
+	}
+	//NAVBAR-HEADER//
+	.navbar{
+		display:flex;
+		justify-content:space-around;
+		padding:10px 0 20px 0;
+		font-size:1.4rem;
+		a{
+			text-decoration:none;
+			color:@color-secondary;
+		}
+	}
+	//ACTION CONTAINER//
+	
+	.Action-Container{
+		background:lightgray;
 
+		@media (max-width: 500px){
+			.AC-top{
+				background:pink;
+			}
+			.AC-bottom{
+				background:pink;
+				display:flex;
+				flex-direction:column;
+				align-items: center;
+				text-align:center;
+			}
 
-//MAIN//
-main{
-	font-family:@main-font;
-}
-//NAVBAR-HEADER//
-.navbar{
-	display:flex;
-	justify-content:space-around;
-	padding:10px;
-	font-size:1.4rem;
-	a{
-		text-decoration:none;
-		color:@color-secondary;
+		}
+		.AC-top{
+			// padding:2% 0;
+			border:1px solid purple;
+			border-bottom:1px solid black;
+			.center()
+		}
+		.img-box{
+			padding:2%;
+
+			img{
+				border-radius:25px;
+			}
+		}
+		p{
+			padding-top:1%;
+		}
+		.AC-bottom{
+			padding:2% 0;
+			
+			div{
+				padding-bottom:2%;
+			}
+			button{
+				width:50%;
+				padding:.5%;
+				border-radius:5px;
+				font-weight:bold;
+				text-align: center;
+				cursor: pointer;
+				outline: none;
+				color: @color-primary;
+				background-color: @color-secondary;
+				border: none;
+				border-radius: 15px;
+				box-shadow: 0 9px @color-primary;
+			}
+			button:hover{
+				background:@color-primary;
+				color:@color-secondary;
+				box-shadow: 0 9px @color-secondary;
+			}
+			button:active {
+				background-color: @color-secondary;
+				color:@color-primary;
+				box-shadow: 0 5px gold;
+				transform: translateY(4px);
+			}
+		}
 	}
 }
 
-//ACTION CONTAINER//
+	//SKILL CONTAINER//
+	.Skill-Container{
+		border:2px solid gold;
+		background:ghostwhite;
+		// padding:2% 0;
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
 
-.Action-Container{
-	background:lightgray;
-	padding:2% 2% 7% 2%;
-}
-.AC-top{
-	padding:2% 0;
-	border-bottom:1px solid black;
-	display:flex;
-	justify-content: center;
-	align-items:center;
-}
-.img-box{
-	width:40%;
-	padding:2%;
-	img{
-		border-radius:25px;
+		.SK-left{
+			border:1px solid red;
+		}
+		.img-box{
+			border:1px solid purple;
+			display:flex;
+			flex-direction:row;
+			align-items:center;
+			// padding-right:2%;
+
+			div{
+				border:1px solid red;
+			}
+		}
+
+		@media (max-width: 500px){
+			.SK-left, .img-box{
+				background:pink;
+			}
+		}
 	}
-}
-.AC-top p{
-	padding-top:1%;
-}
+	//WORK CONTAINER//
+	.Work-Container{
+		h3{
+			font-size:1rem;
+		}
+		.title{
+			border:1px solid purple;
+			border-top:1px solid gray;
+			display:flex;
+			flex-direction:row;
+			justify-content: space-between;
+			padding:10px;
 
-.AC-bottom{
-	padding:2% 0;
-}
-.AC-bottom div{
-	padding-bottom:2%;
-}
-.AC-bottom button{
-	background:;
-	width:15%;
-	padding:.5%;
-	border-radius:5px;
-	font-weight:bold;
-	text-align: center;
-	cursor: pointer;
-	outline: none;
-	color: @color-primary;
-	background-color: @color-secondary;
-	border: none;
-	border-radius: 15px;
-	box-shadow: 0 9px @color-primary;
-}
-.AC-bottom button:hover{
-	background:@color-primary;
-	color:@color-secondary;
-	box-shadow: 0 9px @color-secondary;
-}
-.AC-bottom button:active {
-	background-color: @color-secondary;
-	color:@color-primary;
-	box-shadow: 0 5px gold;
-	transform: translateY(4px);
-}
+			div{
+				border:1px solid purple;
+			}
+		}
+		.experience-box{
+			display:flex;
+			flex-direction:column;
+			// justify-content: space-between;
+			// align-content:flex-start;
+			align-items:stretch;
 
-//SKILL CONTAINER//
-.Skill-Container{
-	border:2px solid gold;
-	background:ghostwhite;
-	padding:2% 0;
-	display:flex;
-	justify-content: space-between;
-	// align-items:center;
-}
-.SK-left{
-	border:2px solid purple;
-}
-.img-box{
-	border:1px solid purple;
-	display:flex;
-	flex-direction:row;
-	align-items:center;
-	// padding-right:2%;
-}
-.img-box div{
-	border:1px solid red;
-}
-
-//WORK CONTAINER//
-.Work-Container h3{
-	font-size:1rem;
-}
-.title{
-	border:1px solid purple;
-	border-top:1px solid gray;
-	display:flex;
-	flex-direction:row;
-	justify-content: space-between;
-	padding:10px;
-}
-.title div{
-	border:1px solid purple;
-}
-
-.experience-box{
-	display:flex;
-	flex-direction:column;
-	// justify-content: space-between;
-	// align-content:flex-start;
-	align-items:stretch;
-}
-.experience{
-	border:1px solid purple;
-	border-top:1px solid gray;
-	display:flex;
-	flex-direction:row;
-	justify-content: space-between;
-	padding:10px;
-}
-.experience div{
-	border:1px solid purple;
-}
-//FOOTER//
-footer{
-	border:1px solid purple;
-	display:flex;
-	justify-content:space-around;
-	padding:20px;
-	font-size:1rem;
-}
-
-
-
-
+			.experience{
+				border:1px solid purple;
+				border-top:1px solid gray;
+				display:flex;
+				flex-direction:row;
+				justify-content: space-between;
+				padding:10px;
+			}
+		}
+	}
+	//FOOTER//
+	footer{
+		border:1px solid purple;
+		display:flex;
+		justify-content:space-around;
+		padding:20px;
+		font-size:1rem;
+	}

@@ -1,9 +1,134 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   max-width: 100%;
+  border: 1px solid purple;
 }
 html,
 body {
@@ -30,49 +155,58 @@ p {
   padding: 20px;
   border-image: linear-gradient(to bottom, #003399, #FFFFFF);
 }
-main {
+.wholeContainer main {
   font-family: 'Hind Madurai', sans-serif;
 }
-.navbar {
+.wholeContainer .navbar {
   display: flex;
   justify-content: space-around;
-  padding: 10px;
+  padding: 10px 0 20px 0;
   font-size: 1.4rem;
 }
-.navbar a {
+.wholeContainer .navbar a {
   text-decoration: none;
   color: #FFFFFF;
 }
-.Action-Container {
+.wholeContainer .Action-Container {
   background: lightgray;
-  padding: 2% 2% 7% 2%;
 }
-.AC-top {
-  padding: 2% 0;
+@media (max-width: 500px) {
+  .wholeContainer .Action-Container .AC-top {
+    background: pink;
+  }
+  .wholeContainer .Action-Container .AC-bottom {
+    background: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.wholeContainer .Action-Container .AC-top {
+  border: 1px solid purple;
   border-bottom: 1px solid black;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
-.img-box {
-  width: 40%;
+.wholeContainer .Action-Container .img-box {
   padding: 2%;
 }
-.img-box img {
+.wholeContainer .Action-Container .img-box img {
   border-radius: 25px;
 }
-.AC-top p {
+.wholeContainer .Action-Container p {
   padding-top: 1%;
 }
-.AC-bottom {
+.wholeContainer .Action-Container .AC-bottom {
   padding: 2% 0;
 }
-.AC-bottom div {
+.wholeContainer .Action-Container .AC-bottom div {
   padding-bottom: 2%;
 }
-.AC-bottom button {
-  background: ;
-  width: 15%;
+.wholeContainer .Action-Container .AC-bottom button {
+  width: 50%;
   padding: 0.5%;
   border-radius: 5px;
   font-weight: bold;
@@ -85,12 +219,12 @@ main {
   border-radius: 15px;
   box-shadow: 0 9px #003399;
 }
-.AC-bottom button:hover {
+.wholeContainer .Action-Container .AC-bottom button:hover {
   background: #003399;
   color: #FFFFFF;
   box-shadow: 0 9px #FFFFFF;
 }
-.AC-bottom button:active {
+.wholeContainer .Action-Container .AC-bottom button:active {
   background-color: #FFFFFF;
   color: #003399;
   box-shadow: 0 5px gold;
@@ -99,26 +233,32 @@ main {
 .Skill-Container {
   border: 2px solid gold;
   background: ghostwhite;
-  padding: 2% 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.SK-left {
-  border: 2px solid purple;
+.Skill-Container .SK-left {
+  border: 1px solid red;
 }
-.img-box {
+.Skill-Container .img-box {
   border: 1px solid purple;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.img-box div {
+.Skill-Container .img-box div {
   border: 1px solid red;
+}
+@media (max-width: 500px) {
+  .Skill-Container .SK-left,
+  .Skill-Container .img-box {
+    background: pink;
+  }
 }
 .Work-Container h3 {
   font-size: 1rem;
 }
-.title {
+.Work-Container .title {
   border: 1px solid purple;
   border-top: 1px solid gray;
   display: flex;
@@ -126,24 +266,21 @@ main {
   justify-content: space-between;
   padding: 10px;
 }
-.title div {
+.Work-Container .title div {
   border: 1px solid purple;
 }
-.experience-box {
+.Work-Container .experience-box {
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
-.experience {
+.Work-Container .experience-box .experience {
   border: 1px solid purple;
   border-top: 1px solid gray;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
-}
-.experience div {
-  border: 1px solid purple;
 }
 footer {
   border: 1px solid purple;
