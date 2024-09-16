@@ -1,1 +1,294 @@
-/* Compile your LESS file! */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  border: 1px solid purple;
+}
+html,
+body {
+  height: 100%;
+  margin: 2%;
+  font-size: 62.5%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 3rem;
+}
+p {
+  font-size: 1.2rem;
+}
+.wholeContainer {
+  border: 1px solid red;
+  background-origin: center;
+  background-image: linear-gradient(#003399, #FFFFFF);
+  border-radius: 50px;
+  padding: 20px;
+  border-image: linear-gradient(to bottom, #003399, #FFFFFF);
+}
+.wholeContainer main {
+  font-family: 'Hind Madurai', sans-serif;
+}
+.wholeContainer .navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0 20px 0;
+  font-size: 1.4rem;
+}
+.wholeContainer .navbar a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.wholeContainer .Action-Container {
+  background: lightgray;
+}
+@media (max-width: 500px) {
+  .wholeContainer .Action-Container .AC-top {
+    background: pink;
+  }
+  .wholeContainer .Action-Container .AC-bottom {
+    background: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.wholeContainer .Action-Container .AC-top {
+  border: 1px solid purple;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wholeContainer .Action-Container .img-box {
+  padding: 2%;
+}
+.wholeContainer .Action-Container .img-box img {
+  border-radius: 25px;
+}
+.wholeContainer .Action-Container p {
+  padding-top: 1%;
+}
+.wholeContainer .Action-Container .AC-bottom {
+  padding: 2% 0;
+}
+.wholeContainer .Action-Container .AC-bottom div {
+  padding-bottom: 2%;
+}
+.wholeContainer .Action-Container .AC-bottom button {
+  width: 50%;
+  padding: 0.5%;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #003399;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #003399;
+}
+.wholeContainer .Action-Container .AC-bottom button:hover {
+  background: #003399;
+  color: #FFFFFF;
+  box-shadow: 0 9px #FFFFFF;
+}
+.wholeContainer .Action-Container .AC-bottom button:active {
+  background-color: #FFFFFF;
+  color: #003399;
+  box-shadow: 0 5px gold;
+  transform: translateY(4px);
+}
+.wholeContainer .Skill-Container {
+  border: 2px solid gold;
+  background: ghostwhite;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .wholeContainer .Skill-Container .Skill-Container {
+    display: flex;
+  }
+  .wholeContainer .Skill-Container .SK-left {
+    background: purple;
+    display: flex;
+  }
+}
+.wholeContainer .Skill-Container .SK-left {
+  border: 1px solid red;
+}
+.wholeContainer .Skill-Container .img-box {
+  border: 1px solid purple;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wholeContainer .Skill-Container .img-box div {
+  border: 1px solid red;
+}
+.wholeContainer .Work-Container h3 {
+  font-size: 1rem;
+}
+.wholeContainer .Work-Container .title {
+  border: 1px solid purple;
+  border-top: 1px solid gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+.wholeContainer .Work-Container .title div {
+  border: 1px solid purple;
+}
+.wholeContainer .Work-Container .experience-box {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.wholeContainer .Work-Container .experience-box .experience {
+  border: 1px solid purple;
+  border-top: 1px solid gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+.wholeContainer footer {
+  border: 1px solid purple;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  font-size: 1rem;
+}
